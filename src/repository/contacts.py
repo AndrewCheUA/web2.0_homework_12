@@ -8,7 +8,7 @@ from src.schemas import ContactModel
 
 
 async def create_contact(body: ContactModel,user: User, db: Session):
-    contact = Contact(name=body.name, user_id=user.id)
+    contact = Contact(**body.dict(), user_id=user.id)
     db.add(contact)
     db.commit()
     db.refresh(contact)
