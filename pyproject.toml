@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "web2-0-homework-12"
+version = "0.1.0"
+description = ""
+authors = ["AndrewCheUA <andreicheban@gmail.com>"]
+readme = "README.md"
+packages = [{include = "web2"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.92.0"
+psycopg2 = "^2.9.5"
+sqlalchemy = "^2.0.4"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+libgravatar = "^1.0.3"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-multipart = "^0.0.5"
+alembic = "^1.9.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
